@@ -8,23 +8,35 @@ scrivi anche la posizione "umana" della lista in cui il nuovo utente si trova*/
 
 var cognomeUtente = prompt("Qual è il tuo cognome?");
 // creo l'array
-
-var cognomi =["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
-
-// inserisco il cognome utente nella Lista
+//
+ var cognomi =["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
+//
+// // inserisco il cognome utente nella Lista e metto in ordine alfabetico
 cognomi.push(cognomeUtente);
+cognomi.sort();
 
-// Metto i cognomi in ordine alfabetico
- cognomi.sort();
-var i = 0;
-var numero = 1;
-while (cognomi[i]) {
-  numero = cognomi[i] + numero + 1;
-  i++
+for (var i = 0; i < cognomi.length; i++) {
+  console.log(cognomi[i]);
 }
 
-console.log(cognomi[i]);
+// iserisco numero ordine
+// var trovato = false;
+// var j = 0;
+// var indice;
+//
+// while (trovato == false) {
+//   if (cognomeUtente == cognomi[j]) {
+//     trovato = true;
+//     indice = j + 1;
+//   }
+//
+//   j++;
+//
+//   if (j == cognomi.length) {
+//     trovato = true;
+//   }
+// }
+//
+// console.log(indice);
 
-
-
-// Scrivo il numero della posizione del cognome
+console.log(cognomi.indexOf(cognomeUtente) + 1);
