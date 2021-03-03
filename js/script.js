@@ -1,4 +1,4 @@
-/*Lista Cognomi
+ /*Lista Cognomi
 Chiedere all’utente il cognome
 inserirlo in un array con altri cognomi: ‘Bianchi’, ‘Rossi’, ‘Duzioni’, ‘Balsano’, ‘Verdi’
 stampa la lista ordinata alfabeticamente
@@ -15,7 +15,16 @@ var cognomi =["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 cognomi.push(cognomeUtente);
 
 // Metto i cognomi in ordine alfabetico
-for (var i = 0; i < cognomi.length; i++) {
-  cognomi.sort();
-  console.log(cognomi[i]);
+ cognomi.sort();
+var i = 0;
+var numero = 1;
+while (cognomi[i]) {
+  numero = cognomi[i] + numero + 1;
+  i++
 }
+
+console.log(cognomi[i]);
+
+
+
+// Scrivo il numero della posizione del cognome
